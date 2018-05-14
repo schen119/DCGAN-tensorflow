@@ -6,6 +6,9 @@ from model import DCGAN
 from utils import pp, visualize, to_json, show_all_variables
 
 import tensorflow as tf
+import logging
+logging.basicConfig(level=logging.INFO)
+
 
 flags = tf.app.flags
 flags.DEFINE_integer("epoch", 25, "Epoch to train [25]")
@@ -29,6 +32,8 @@ flags.DEFINE_integer("generate_test_images", 100, "Number of images to generate 
 FLAGS = flags.FLAGS
 
 def main(_):
+
+  logging.info("SCSCSC")
   pp.pprint(flags.FLAGS.__flags)
 
   if FLAGS.input_width is None:
